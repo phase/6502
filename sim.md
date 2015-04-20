@@ -15,7 +15,7 @@ You can debug it by checking `Debug` and go through each instruction with `Step`
 If you check `Monitor`, you can see a table of memory.
 
 `Notes` lets you view this (useful on other pages):
-```
+{% highlight %}
 Memory location $fe contains a new random byte on every instruction.
 Memory location $ff contains the ascii code of the last key pressed.
 
@@ -38,4 +38,4 @@ $c: Grey
 $d: Light green
 $e: Light blue
 $f: Light grey
-```
+{% endhighlight %}
