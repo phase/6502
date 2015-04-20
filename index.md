@@ -7,3 +7,21 @@ The [6502 processor](http://en.m.wikipedia.org/wiki/MOS_Technology_6502) was use
 
 ##Why do I want to learn it?
 Why not? It's a fun language that can be ported to many different systems! It's heavily used in the [NES development](http://nesdev.com/) community, which actively *make* NES games for emulators and consoles. Something like x86 may be used more today, but there's no real reason why you wouldn't use a language that compiles into x86. Until someone create a language that compiles to 6502, we'll all be stuck here coding it.
+
+<h1 id="tutorial">Tutorial</h1>
+Let's dive on in! We'll be using a simulator made by [skilldrick](https://github.com/skilldrick) in Javascript. You can find more info on the [simulator](/sim) page.
+
+{% include asm-start.html %}
+lda #$01
+sta $0200
+lda #$05
+sta $0201
+lda #$08
+sta $0202
+{% include asm-end.html %}
+
+Not like any OOP, now is it? 6502 uses a variety of instructions to get it's job done, each of which may contain an argument.
+
+The first instruction is `lda`, or `LoaD to register A`, and it's argument is the number you want loaded. There are three registers on the 6502, `A`, `X`, and `Y`, which temporarily store information. Using `lda`, we can load whatever number we want onto the `A` register.
+
+Numbers can have two different meanings. If they have a `#` before it, they are the number itself. If not, it's redirected to the location in memory of that number. A `$` before a number means it's in hexadecimal, or base 16. So, the `#$01` means that `lda` is going to load `1` into register `A` (as you can see by the `A=` changing to the number `1` in the Debug menu).
