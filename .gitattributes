@@ -1,1 +1,3 @@
-*.js linguist-language=Assembly
+*.js linguist-language=Markdown
+*.css linguist-language=Markdown
+*.html linguist-language=Markdown
