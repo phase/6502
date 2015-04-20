@@ -19,4 +19,8 @@ Not like any OOP, now is it? 6502 uses a variety of instructions to get it's job
 
 The first instruction is `lda`, or `LoaD to register A`, and it's argument is the number you want loaded. There are three registers on the 6502, `A`, `X`, and `Y`, which temporarily store information. Using `lda`, we can load whatever number we want onto the `A` register.
 
-Numbers can have two different meanings. If they have a `#` before it, they are the number itself. If not, it's redirected to the location in memory of that number. A `$` before a number means it's in hexadecimal, or base 16. So, the `#$01` means that `lda` is going to load `1` into register `A` (as you can see by the `A=` changing to the number `1` in the Debug menu).
+Numbers can have two different meanings. If they have a `#` before it, they are the number itself. If not, it's redirected to the location in memory of that number. A `$` before a number means it's in hexadecimal, or base 16. So, the `#$01` means that `lda` is going to load `1` into register `A` (as you can see by the `A=` changing to the number `01` in the Debug menu).
+
+Data stored between `$200` and `$5ff` will be displayed on the screen to the right. The color will depend on the value stored.
+
+The second instruction is `sta`, or `STore what's on A`. This will take the number on register `A` and store it at the provided memory location. So, `sta $020` store the `#$01` that is on `A`.
