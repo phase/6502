@@ -9,7 +9,7 @@ The [6502 processor](http://en.m.wikipedia.org/wiki/MOS_Technology_6502) was use
 Why not? It's a fun language that can be ported to many different systems! It's heavily used in the [NES development](http://nesdev.com/) community, which actively *make* NES games for emulators and consoles. Something like x86 may be used more today, but there's no real reason why you wouldn't use a language that compiles into x86. Until someone create a language that compiles to 6502, we'll all be stuck here coding it.
 
 <h1 id="tutorial">Tutorial</h1>
-Let's dive on in! We'll be using a simulator made by [skilldrick](https://github.com/skilldrick) in Javascript. You can find more info on the [simulator](/sim) page.
+Let's dive on in! We'll be using a simulator made by [skilldrick](https://github.com/skilldrick) in Javascript. You can find more info on the [simulator](/6502/sim) page.
 
 {% include asm-start.html %}
 lda #$01
