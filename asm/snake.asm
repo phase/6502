@@ -272,4 +272,16 @@ spinloop:
 
 
 gameOver:
+  jsr reset
   jmp start
+  
+reset:
+  lda #$00
+  ldy #$00
+  sta $0200,y
+  cpy $05ff
+  bne resetLoop
+  rts
+resetLoop:
+  iny
+  rts
