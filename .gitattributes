@@ -1,6 +1,6 @@
-*.js linguist-language=Markdown
-*.css linguist-language=Markdown
-*.html linguist-language=Markdown
+*.js linguist-language=Assembly
+*.css linguist-language=Assembly
+*.html linguist-language=Assembly
 
 *.bat linguist-language=Oz
 *.nes linguist-language=Oz
