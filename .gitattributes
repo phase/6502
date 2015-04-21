@@ -4,5 +4,5 @@
 
 *.bat linguist-language=Oz
 *.nes linguist-language=Oz
-*.fns linguist-language=Oz
+*.fns linguist-language=Assembly
 *.chr linguist-language=Oz
