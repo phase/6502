@@ -1,3 +1,8 @@
 *.js linguist-language=Markdown
 *.css linguist-language=Markdown
 *.html linguist-language=Markdown
+
+*.bat linguist-language=Oz
+*.nes linguist-language=Oz
+*.fns linguist-language=Oz
+*.chr linguist-language=Oz
