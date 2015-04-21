@@ -44,7 +44,7 @@ vblankwait2:      ; Second wait for vblank, PPU is ready after this
   bpl vblankwait2
 
 
-  lda #%01100000   ;intensify blues
+  lda #%01100000   ;intensify green & red
   sta $2001
 
 Forever:
