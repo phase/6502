@@ -1,8 +1,5 @@
 *.js linguist-language=Assembly
-*.css linguist-language=Assembly
-*.html linguist-language=Assembly
 
-*.bat linguist-language=Oz
-*.nes linguist-language=Oz
+*.nes linguist-language=nesC
 *.fns linguist-language=Assembly
-*.chr linguist-language=Oz
+*.chr linguist-language=Character
