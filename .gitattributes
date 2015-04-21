@@ -1,3 +1,6 @@
 *.nes linguist-language=nesC
 *.fns linguist-language=Assembly
 *.chr linguist-language=Assembly
+*.md linguist-language=Assembly
+*.bat linguist-language=Assembly
+*.txt linguist-language=Assembly
