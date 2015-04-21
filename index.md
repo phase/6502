@@ -23,4 +23,4 @@ Numbers can have two different meanings. If they have a `#` before it, they are 
 
 Data stored between `$200` and `$5ff` will be displayed on the screen to the right. The color will depend on the value stored.
 
-The second instruction is `sta`, or `STore what's on A`. This will take the number on register `A` and store it at the provided memory location. So, `sta $020` store the `#$01` that is on `A`.
+The second instruction is `sta`, or `STore what's on A`. This will take the number on register `A` and store it at the provided memory location. So, `sta $020`: store the `1` that is on `A` in `$020`.
