@@ -69,7 +69,7 @@ vblankwait2:      ; Second wait for vblank, PPU is ready after this
 ### Rendering a background
 For now, we're only going to render a background color. To do this, we will be writing to a special byte of memory.
 
-The byte `$2001` renders the color of the background. Inputting a binary number, we can add a variety of options.
+The byte `$2001` renders the background. Inputting a binary number, we can add a variety of options.
 <pre>
 76543210
 ||||||||
@@ -85,6 +85,14 @@ The byte `$2001` renders the color of the background. Inputting a binary number,
 +-------- Intensify blues (and darken other colors)</pre>
 
 {% highlight Ca65 %}
-  lda #%100000   ;intensify blue
-  sta $2001
+lda #%100000   ;intensify blue
+sta $2001
 {% endhighlight %}
+
+Next, we want to do some looping.
+<pre>
+Forever:
+  jmp Forever     ;jump back to Forever, infinite loop
+NMI:
+  rti
+</pre>
