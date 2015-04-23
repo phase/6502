@@ -19,7 +19,7 @@ Next, create an Assembly file. For this tutorial, we'll be using `background.asm
 
 ### iNes Header
 The 16 byte iNES header gives the NES all the information about the game including mapper, graphics mirroring, and PRG/CHR sizes. This will be the start of your file.
-{% highlight Ca65Lexer %}
+{% highlight Ca65 %}
   .inesprg 1   ; 1x 16KB bank of PRG code
   .ineschr 1   ; 1x 8KB bank of CHR data
   .inesmap 0   ; mapper 0 = NROM, no bank swapping
@@ -28,7 +28,7 @@ The 16 byte iNES header gives the NES all the information about the game includi
 
 ### Reseting the system
 Next, we need to reset the system. This will clear the memory and reset various things. You can put this in your code right after the header.
-{% highlight Ca65Lexer %}
+{% highlight Ca65 %}
   .bank 0
   .org $C000 
 RESET:
@@ -84,7 +84,7 @@ The byte `$2001` renders the color of the background. Inputting a binary number,
 |+------- Intensify greens (and darken other colors)
 +-------- Intensify blues (and darken other colors)</pre>
 
-{% highlight Ca65Lexer %}
+{% highlight Ca65 %}
   lda #%100000   ;intensify blue
   sta $2001
 {% endhighlight %}
