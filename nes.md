@@ -65,3 +65,26 @@ vblankwait2:      ; Second wait for vblank, PPU is ready after this
   bit $2002
   bpl vblankwait2
 {% endhighlight %}
+
+### Rendering a background
+For now, we're only going to render a background color. To do this, we will be writing to a special byte of memory.
+
+The byte `$2001` renders the color of the background. Inputting a binary number, we can add a variety of options.
+<pre>
+76543210
+||||||||
+|||||||+- Grayscale (0: normal color; 1: AND all palette entries
+|||||||   with 0x30, effectively producing a monochrome display;
+|||||||   note that colour emphasis STILL works when this is on!)
+||||||+-- Disable background clipping in leftmost 8 pixels of screen
+|||||+--- Disable sprite clipping in leftmost 8 pixels of screen
+||||+---- Enable background rendering
+|||+----- Enable sprite rendering
+||+------ Intensify reds (and darken other colors)
+|+------- Intensify greens (and darken other colors)
++-------- Intensify blues (and darken other colors)</pre>
+
+{% highlight Assembly %}
+  lda #%100000   ;intensify blue
+  sta $2001
+{% endhighlight %}
