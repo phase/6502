@@ -1,4 +1,4 @@
-ldx #$10
+ldx #$0d
 stx $0200
 txa
 inx
