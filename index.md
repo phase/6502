@@ -12,7 +12,7 @@ Why not? It's a fun language that can be ported to many different systems! It's 
 Let's dive on in! We'll be using a simulator made by [skilldrick](https://github.com/skilldrick) in Javascript. You can find more info on the [simulator](/6502/sim) page.
 
 {% include asm-start.html %}
-{% include_relative asm/diveOnIn.asm %}
+{% include_relative asm/examples/diveOnIn.asm %}
 {% include asm-end.html %}
 
 Not like any OOP, now is it? 6502 uses a variety of instructions to get it's job done, each of which may contain an argument.
