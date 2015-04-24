@@ -24,3 +24,12 @@ Numbers can have two different meanings. If they have a `#` before it, they are 
 Data stored between `$200` and `$5ff` will be displayed on the screen to the right. The color will depend on the value stored.
 
 The second instruction is `sta`, or `STore what's on A`. This will take the number on register `A` and store it at the provided memory location. So, `sta $020`: store the `1` that is on `A` in `$020`.
+
+## Loading to other registers
+Using one register for everything can be difficult, so they added two more! `X` and `Y` are the other two registers, and they're as easy to use as `A`!
+
+{% include asm-start.html %}
+{% include_relative asm/examples/otherRegisters.asm %}
+{% include asm-end.html %}
+
+Instead of `a` in `lda`, we're using `ldx` to load to register `X`. The same goes for `stx`. `txa` transfers the value in `X` to `A`. `inx` increments the value in `X` by `1`.
